@@ -140,7 +140,7 @@ function CaptionifyLogic({ setCaptionLoading, setCaptions }) {
         try {
           setImageLoading(true);
           const response = await axios.post(
-            "http://127.0.0.1:8000/api/description",
+            "https://captionify-8d7g.onrender.com/api/description",
             {
               image: base64String,
             }
@@ -180,14 +180,17 @@ function CaptionifyLogic({ setCaptionLoading, setCaptions }) {
     }
     setCaptionLoading(true);
     try {
-      const response = await axios.post("http://127.0.0.1:8000/api/caption", {
-        description,
-        tone,
-        style: writingStyle,
-        additionalContext: additionalContext ? additionalContext : null,
-        emojis: includeEmojis ? "Yes" : "No",
-        hashtags: includeHashtags ? "Yes" : "No",
-      });
+      const response = await axios.post(
+        "https://captionify-8d7g.onrender.com/api/caption",
+        {
+          description,
+          tone,
+          style: writingStyle,
+          additionalContext: additionalContext ? additionalContext : null,
+          emojis: includeEmojis ? "Yes" : "No",
+          hashtags: includeHashtags ? "Yes" : "No",
+        }
+      );
       setCaptionLoading(false);
       setCaptions(JSON.parse(response.data).captions);
     } catch (err) {
