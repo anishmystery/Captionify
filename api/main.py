@@ -15,9 +15,9 @@ app = FastAPI()
 # Enable CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_origins=["https://captionify-sage.vercel.app"],
+    allow_methods=["GET", "OPTIONS", "PATCH", "DELETE", "POST", "PUT"],
+    allow_headers=["X-CSRF-Token", "X-Requested-With", "Accept", "Accept-Version", "Content-Length", "Content-MD5", "Content-Type", "Date", "X-Api-Version"],
 )
 
 class ImageDescriptionRequest(BaseModel):
