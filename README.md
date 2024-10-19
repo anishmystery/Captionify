@@ -15,8 +15,8 @@
 
 ## Usage
 
-1. **Go to [Captionify]()**  
-   Navigate to the Captionify web app by visiting [this link]().
+1. **Go to [Captionify](https://captionify-sage.vercel.app/)**  
+   Navigate to the Captionify web app by visiting [this link](https://captionify-sage.vercel.app/).
 
 2. **Upload an image**  
    Upload an image for which the caption is to be generated Supported file types are JPG and PNG (not more than 10MB).
