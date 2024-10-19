@@ -1,0 +1,24 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/captionify/node_modules
+/captionify/.pnp
+/captionify/.pnp.js
+
+# testing
+/captionify/coverage
+
+# production
+/captionify/build
+
+# misc
+/myvenv
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
